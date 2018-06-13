@@ -27,6 +27,11 @@ h1{
     margin-left:0;
 }
 
+#stats2{
+    padding: 10px;
+    background-color: grey;
+    margin-left:0;
+}
 .crystalPurple{
     background-color: purple;
     padding:10px;
