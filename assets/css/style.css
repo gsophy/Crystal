@@ -1,13 +1,10 @@
 * {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    /* display: inline-block; */
-    
+    color: white;
     }
 
 #images {
-    background-color: gray;
     border: 5px;
-    border-color: black;
     padding: 30px;
 }
 
@@ -30,22 +27,21 @@
     width: 200px;
 }
 
-h1{
+h1 {
     text-align: center;
     padding: 10px;
     margin: auto; 
+    color: white;
 }
 
 #stats1{
     padding: 10px;
-    background-color: grey;
     margin-top: 20px;
     margin-left:0;
 }
 
 #stats2{
     padding: 10px;
-    background-color: gray;
     margin-left:0;
 }
 .crystalPurple{
@@ -81,7 +77,9 @@ h1{
     padding: 5px;
     width: 200px;
     margin: auto;
-
+}
+body {
+    background-image: url("../images/crystal-bg.jpeg");
 }
 
 
