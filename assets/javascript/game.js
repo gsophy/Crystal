@@ -61,11 +61,13 @@ function startOver () {
 function winLoseDraw () {
     if (yourScore === targetScore) {
         wins++;
+        alert("You Win!");
         startOver();
         
     }
     else if (yourScore > targetScore) {
         losses++;
+        alert("You Lose, Loser!");
         startOver();
     }
     else {
