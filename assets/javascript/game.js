@@ -33,25 +33,82 @@ randomTargetScore();
 randomCrystalValues();
 updateHTML();
 
+console.log(crystalPurple);
+console.log(crystalLavender);
+console.log(crystalBlue);
+console.log(crystalWhite);
+
 function updateHTML () {
     $("#wins").text(wins);
     $("#losses").text(losses);
     $("#targetScore").text(targetScore);
     $("#yourScore").text(yourScore);
     }
- 
-
-
-
 
 $("#resetGame").on("click", function () {
     randomTargetScore();
-    yourscore = 0;
+    yourScore = 0;
     updateHTML();
 }) 
 
+function startOver () {
+    randomTargetScore ();
+    randomCrystalValues ();
+    yourScore = 0;
+    updateHTML ();
+}
+
+function winLoseDraw () {
+    if (yourScore === targetScore) {
+        wins++;
+        startOver();
+        
+    }
+    else if (yourScore > targetScore) {
+        losses++;
+        startOver();
+    }
+    else {
+        // alert("You're getting close!  Pick again.");
+    }
+}
+
+/* Include a function that compares yourScore
+and targetScore.  
+If yourScore = targetScore, you win.
+If yourScore < targetScore, keep picking.
+if yourScore > targetScore, you lose. */
 
 
+
+
+/*Add a click listener for each crystal icon.  When a crystal is
+clicked, add the value of the crystal to the score and run a function to
+evaluate the score. */
+
+$(".crystal1").on("click", function () {
+    yourScore += crystalPurple;
+    $("#yourScore").text(yourScore); 
+    winLoseDraw ();
+});
+
+$(".crystal2").on("click", function () {
+    yourScore += crystalLavender;
+    $("#yourScore").text(yourScore); 
+    winLoseDraw ();
+});
+
+$(".crystal3").on("click", function () {
+    yourScore += crystalBlue;
+    $("#yourScore").text(yourScore); 
+    winLoseDraw ();
+});
+
+$(".crystal4").on("click", function () {
+    yourScore += crystalWhite;
+    $("#yourScore").text(yourScore); 
+    winLoseDraw ();
+});
 
 //Print output to the console to validate that random numbers are generated
 // console.log(targetScore);
