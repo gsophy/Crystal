@@ -28,20 +28,28 @@ function randomCrystalValues () {
 //generate White Crystal random value
     crystalWhite = Math.ceil((Math.random() * 11) + 1);
 }
+
 randomTargetScore();
 randomCrystalValues();
-
-function updateHTML () {
-$("#wins").text(wins);
-$("#losses").text(losses);
-$("#targetScore").text(targetScore);
-$("#yourScore").text(yourScore);
-}
 updateHTML();
 
-$(".crystal").on("click", function () {
-    console.log (this);
+function updateHTML () {
+    $("#wins").text(wins);
+    $("#losses").text(losses);
+    $("#targetScore").text(targetScore);
+    $("#yourScore").text(yourScore);
+    }
+ 
+
+
+
+
+$("#resetGame").on("click", function () {
+    randomTargetScore();
+    yourscore = 0;
+    updateHTML();
 }) 
+
 
 
 

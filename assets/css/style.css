@@ -1,7 +1,8 @@
 * {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     /* display: inline-block; */
-}
+    
+    }
 
 #images {
     background-color: gray;
@@ -59,17 +60,17 @@ h1{
     font-size: 14pt;
     text-align: center;
 }
+#button{
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px;
+    width: 200px;
+    margin: auto;
+
+}
 
 body{
     /* The image used */
-    background-image: url ("crystal-bg.jpeg");
 
-    /* Full height */
-    height: 100%; 
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
  }
 
